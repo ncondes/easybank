@@ -1,0 +1,7 @@
+/* --------------------------------------------------
+# EASYBANK LANDING PAGE
+-------------------------------------------------- */
+
+- Frontend Mentor Link 
+
+https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN
