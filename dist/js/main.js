@@ -11,7 +11,3 @@ hamburguer.addEventListener('click', () => {
   mobileMenu.classList.toggle('open');
   mobileMenu.classList.add('fade-out');
 });
-
-mediaquery.addEventListener(function (e) {
-  alert('ejecutando el listener', e);
-});

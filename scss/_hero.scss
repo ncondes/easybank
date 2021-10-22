@@ -1,0 +1,106 @@
+.hero {
+  background-color: $veryLightGray;
+  overflow: hidden;
+
+  .container {
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    position: relative;
+    min-height: 17.5rem;
+    background-image: url('../images/bg-intro-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include breakpoint-up(medium) {
+      min-height: 25rem;
+    }
+
+    @include breakpoint-up(large) {
+      flex: 3;
+      order: 2;
+      min-height: 41rem;
+      background-image: none;
+
+      // background-image: url('../images/bg-intro-desktop.svg');
+      // background-position: left center;
+    }
+
+    &::before {
+      content: '';
+      height: 100%;
+      position: absolute;
+      background-image: url('../images/bg-intro-desktop.svg');
+      background-size: 86%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      @include breakpoint-up(medium) {
+        background-position: center top;
+      }
+
+      @include breakpoint-up(large) {
+        width: 150%;
+        background-size: 120%;
+        background-repeat: no-repeat;
+        background-position: 0% 70%;
+      }
+    }
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: url('../images/image-mockups.png');
+      background-size: 86%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      @include breakpoint-up(medium) {
+        background-size: 65%;
+      }
+
+      @include breakpoint-up(large) {
+        width: 120%;
+        height: 120%;
+        position: absolute;
+        background-size: 90%;
+        background-position: 100% 120%;
+        left: 20%;
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      flex: 2;
+      order: 1;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 2.3125rem;
+      font-weight: 300;
+      line-height: 1.2;
+      color: $darkBlue;
+      margin-bottom: 1.5rem;
+
+      @include breakpoint-up(large) {
+        font-size: $font-xl;
+      }
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 2.25rem;
+    }
+  }
+}

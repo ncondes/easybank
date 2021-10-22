@@ -65,6 +65,7 @@
   }
 
   &__mobile-menu {
+    z-index: 10;
     display: none;
     flex-direction: column;
     position: absolute;
@@ -121,19 +122,10 @@
       }
     }
   }
-
-  &__cta {
-    font-size: $font-sm;
-    color: $white;
-    transition: opacity 300ms ease-in-out;
-
-    &:hover {
-      opacity: 0.75;
-    }
-  }
 }
 
 .overlay {
+  z-index: 10;
   opacity: 0;
   position: fixed;
   top: 3.81625rem;
