@@ -10,4 +10,5 @@ hamburguer.addEventListener('click', () => {
   overlay.classList.add('fade-out');
   mobileMenu.classList.toggle('open');
   mobileMenu.classList.add('fade-out');
+  document.body.classList.toggle('noscroll');
 });
