@@ -1,6 +1,6 @@
 .hero {
   background-color: $veryLightGray;
-  overflow: hidden;
+  // overflow: hidden;
 
   .container {
     @include breakpoint-up(large) {
@@ -72,7 +72,7 @@
         position: absolute;
         background-size: 90%;
         background-position: 100% 120%;
-        left: 20%;
+        left: 15%;
       }
     }
   }
