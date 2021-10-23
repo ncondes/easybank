@@ -1,0 +1,129 @@
+.footer {
+  background-color: $darkBlue;
+  color: $white;
+  text-align: center;
+  font-size: 0.875rem;
+
+  @include breakpoint-up(large) {
+    text-align: left;
+  }
+
+  > div {
+    @include breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(2, 1fr) 4fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: 'logo links1 links2 cta' 'social links1 links2 attributions';
+      gap: 5px 20px;
+    }
+  }
+
+  .container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  a {
+    color: white;
+    display: inline-block;
+  }
+  &__logo {
+    display: inline-block;
+    margin-bottom: 1.875rem;
+    @include breakpoint-up(large) {
+      grid-area: logo;
+      margin-bottom: 0;
+    }
+  }
+  &__social {
+    margin-bottom: 1.875rem;
+
+    a {
+      img {
+        :hover {
+          color: $limeGreen;
+        }
+      }
+
+      svg path {
+        transition: fill 200ms ease-in-out;
+      }
+
+      &:hover svg path {
+        fill: $limeGreen;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      grid-area: social;
+      margin-bottom: 0;
+      align-self: flex-end;
+    }
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      transition: color 200ms ease-in-out;
+      &:hover {
+        color: $limeGreen;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      align-items: flex-start;
+    }
+
+    a {
+      line-height: 2.25;
+    }
+
+    &.col-1 {
+      @include breakpoint-up(large) {
+        grid-area: links1;
+      }
+    }
+    &.col-2 {
+      margin-bottom: 1.875rem;
+      @include breakpoint-up(large) {
+        margin-bottom: 0;
+        grid-area: links2;
+      }
+    }
+  }
+
+  &__cta {
+    @include breakpoint-up(large) {
+      grid-area: cta;
+      text-align: right;
+    }
+    a.btn {
+      margin-bottom: 1.875rem;
+      @include breakpoint-up(large) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__copyright {
+    margin-bottom: 1rem;
+    @include breakpoint-up(large) {
+      margin-bottom: 0;
+    }
+  }
+  &__attributions {
+    color: $grayishBlue;
+    a {
+      color: $grayishBlue;
+    }
+    @include breakpoint-up(large) {
+      grid-area: attributions;
+      text-align: right;
+      align-self: flex-end;
+    }
+  }
+}
